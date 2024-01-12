@@ -1,3 +1,31 @@
+## [0.6.1](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.6.0...v0.6.1) (2024-01-12)
+
+
+### Bug Fixes
+
+* add skip-version-file param ([131ce00](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/131ce007f3145811452ec0d73f729fea9d9d3473))
+* create release tag ([ede947f](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/ede947fae16ccf1d4617309f3941edf1666100ff))
+
+
+
+# [0.6.0](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.5.0...v0.6.0) (2024-01-12)
+
+
+### Bug Fixes
+
+* another fix commit ([64ca0c6](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/64ca0c60fafbd32fa806cd4ce15fc228d63b7b6c))
+
+
+### Features
+
+* another feature commit ([0255783](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/02557836303c9c009fe24586a9a70e804a593a71))
+
+
+
+# [0.5.0](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.4.0...v0.5.0) (2024-01-12)
+
+
+
 # [0.4.0](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.3.0...v0.4.0) (2024-01-12)
 
 
@@ -23,14 +51,6 @@
 ### Features
 
 * add feature commit ([4aa2e8b](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/4aa2e8b94e9ea3c492da6d9b7d339ecf951fb8bc))
-
-
-
-# [0.2.0](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.1.0...v0.2.0) (2024-01-12)
-
-
-
-# 0.1.0 (2024-01-12)
 
 
 
