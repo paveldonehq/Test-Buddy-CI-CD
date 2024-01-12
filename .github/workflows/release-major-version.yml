@@ -75,6 +75,7 @@ jobs:
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
           release_name: ${{ steps.changelog.outputs.tag }}
+          fallback-version: ${{ env.LATEST_TAG }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
       # - name: Commit and push new version
       #   env:
