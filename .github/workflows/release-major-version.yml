@@ -24,7 +24,9 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          skip-on-empty: false
           skip-commit: true
+          create-summary: true
 
       - name: Create Release
         uses: ncipollo/release-action@v1
