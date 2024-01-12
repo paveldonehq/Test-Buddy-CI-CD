@@ -67,7 +67,7 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          fallback-version: ${{ env.LATEST_TAG }}
+          fallback-version: ${{ env.NEW_VERSION }}
       - name: Create Release
         uses: actions/create-release@v1
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
