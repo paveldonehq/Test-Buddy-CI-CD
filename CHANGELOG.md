@@ -3,7 +3,9 @@
 
 ### Bug Fixes
 
+* add id to changelog job ([74cd61b](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/74cd61b51103fe9146f69010bde811a3329991a4))
 * add skip-version-file param ([131ce00](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/131ce007f3145811452ec0d73f729fea9d9d3473))
+* create release tag ([ee68029](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/ee6802924dfae87474625e797cec9c5116f2fa07))
 * create release tag ([ede947f](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/ede947fae16ccf1d4617309f3941edf1666100ff))
 
 
