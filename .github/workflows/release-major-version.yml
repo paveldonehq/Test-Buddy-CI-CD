@@ -71,6 +71,7 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
+          tag: ${{ env.NEW_VERSION }}
           bodyFile: "CHANGELOG.md"
       # - name: Commit and push new version
       #   env:
