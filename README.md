@@ -12,6 +12,7 @@ Test Buddy CI/CD
 
 - another fix commit
 - another feature commit
+- another docs commit
 
 ## Add changelog
 
