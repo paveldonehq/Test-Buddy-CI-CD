@@ -69,14 +69,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           fallback-version: ${{ env.NEW_VERSION }}
       - name: Create Release
-        uses: actions/create-release@v1
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.github_token }}
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
+          bodyFile: "CHANGELOG.md"
       # - name: Commit and push new version
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
