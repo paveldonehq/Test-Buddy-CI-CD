@@ -8,6 +8,7 @@ Test Buddy CI/CD
 
 - fix commit
 - feature commit
+- docs commit
 
 ## Add changelog
 
