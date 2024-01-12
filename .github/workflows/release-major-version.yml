@@ -74,9 +74,9 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ steps.changelog.outputs.tag }}
-          # body: ${{ steps.changelog.outputs.clean_changelog }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
           # bodyFile: "CHANGELOG.md"
-          generateReleaseNotes: true
+          # generateReleaseNotes: true
       # - name: Commit and push new version
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
