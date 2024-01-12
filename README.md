@@ -8,3 +8,8 @@ Test Buddy CI/CD
 
 - fix commit
 - feature commit
+
+## Add changelog
+
+- try to add changelog
+- try to create release notes
