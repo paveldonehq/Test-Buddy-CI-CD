@@ -70,12 +70,13 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           fallback-version: ${{ env.NEW_VERSION }}
           skip-version-file: true
+          output-file: false
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
-          bodyFile: "CHANGELOG.md"
+          # bodyFile: "CHANGELOG.md"
           # generateReleaseNotes: true
       # - name: Commit and push new version
       #   env:
