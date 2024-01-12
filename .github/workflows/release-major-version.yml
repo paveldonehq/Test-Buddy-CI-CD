@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main
-
+permissions:
+  contents: write
 jobs:
   generate-version:
     runs-on: ubuntu-latest
@@ -62,9 +63,22 @@ jobs:
           echo Processed Commits:
           echo $(git rev-list --pretty=oneline $start_sha..HEAD)
         shell: bash
-      - name: Commit and push new version
+      - name: Conventional Changelog Action
+        uses: TriPSs/conventional-changelog-action@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Release
+        uses: actions/create-release@v1
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release create "$NEW_VERSION" --title "$NEW_VERSION" \
-            --target main --generate-notes
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
+      # - name: Commit and push new version
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     gh release create "$NEW_VERSION" --title "$NEW_VERSION" \
+      #       --target main --generate-notes
