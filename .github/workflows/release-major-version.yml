@@ -68,6 +68,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           fallback-version: ${{ env.NEW_VERSION }}
+          skip-version-file: true
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
