@@ -71,7 +71,6 @@ jobs:
           fallback-version: ${{ env.NEW_VERSION }}
           version-file: false
           skip-version-file: true
-          output-file: false
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
