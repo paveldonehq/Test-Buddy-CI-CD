@@ -75,7 +75,7 @@ jobs:
         with:
           tag: ${{ steps.changelog.outputs.tag }}
           # body: ${{ steps.changelog.outputs.clean_changelog }}
-          bodyFile: "CHANGELOG.md"
+          # bodyFile: "CHANGELOG.md"
           generateReleaseNotes: true
       # - name: Commit and push new version
       #   env:
