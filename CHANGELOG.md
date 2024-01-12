@@ -1,3 +1,12 @@
+## [0.6.6](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.6.5...v0.6.6) (2024-01-12)
+
+
+### Bug Fixes
+
+* package.json version ([5dbbdc4](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/5dbbdc4ff814f1b66e866a06be08f44c430a2ca4))
+
+
+
 ## [0.6.5](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.6.4...v0.6.5) (2024-01-12)
 
 
@@ -34,18 +43,6 @@
 ### Bug Fixes
 
 * remove bodyFile param ([aa9883c](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/aa9883cb010a6481d69fa814f6e2e768c322b44e))
-
-
-
-## [0.6.1](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.6.0...v0.6.1) (2024-01-12)
-
-
-### Bug Fixes
-
-* add id to changelog job ([74cd61b](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/74cd61b51103fe9146f69010bde811a3329991a4))
-* add skip-version-file param ([131ce00](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/131ce007f3145811452ec0d73f729fea9d9d3473))
-* create release tag ([ee68029](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/ee6802924dfae87474625e797cec9c5116f2fa07))
-* create release tag ([ede947f](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/ede947fae16ccf1d4617309f3941edf1666100ff))
 
 
 
