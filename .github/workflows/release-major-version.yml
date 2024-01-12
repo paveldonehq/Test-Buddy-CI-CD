@@ -1,0 +1,70 @@
+name: Generate Version on Master Merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+          fetch-depth: 0
+      - name: Get latest tag in main branch
+        id: latest_tag
+        run: |
+          git fetch origin -f --tags -p --prune-tags && \
+            git checkout main
+          latest_tag=$(git tag -l --merged main | sort -V -r | head -n 1)
+          if [[ -z "$latest_tag" ]]; then
+             printf '%s\n' "Release not found. Creating first release v0.1.0" >&2
+             echo "LATEST_TAG=v0.0.0" >> "$GITHUB_ENV"
+             exit 0
+          else
+            echo "LATEST_TAG=$latest_tag" >> "$GITHUB_ENV"
+          fi
+          echo LATEST_TAG=$latest_tag
+      - name: Generate Version
+        id: generate_version
+        run: |
+          # Get the latest tag from the previous step
+          last_tag=${{ env.LATEST_TAG }}
+
+          # Extract the version from the tag, e.g., "v1.0.0" -> "1.0.0"
+          current_version=${last_tag}
+
+          # Split the current version into an array
+          IFS='.' read -ra version_parts <<< "$current_version"
+
+          # Increment the minor version
+          new_major=$((version_parts[1] + 1))
+
+          # Create the new version
+          new_version="${version_parts[0]}.$new_major.0"
+
+          # Output the new version for use in the next step
+          echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
+          echo NEW_VERSION=$new_version
+
+      - name: Collect issue numbers since last release/tag in master
+        continue-on-error: true
+        run: |
+          export LC_ALL=en_US.utf8
+
+          start_sha=$(git describe --abbrev=0 --tags ${{ env.LATEST_TAG }} 2> /dev/null || \
+            git rev-list --max-parents=0 HEAD)
+          
+          echo Processed Commits:
+          echo $(git rev-list --pretty=oneline $start_sha..HEAD)
+        shell: bash
+      - name: Commit and push new version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$NEW_VERSION" --title "$NEW_VERSION" \
+            --target main --generate-notes
