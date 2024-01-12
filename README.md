@@ -7,3 +7,4 @@ Test Buddy CI/CD
 ## Test Release Notes
 
 - fix commit
+- feature commit
