@@ -69,6 +69,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           fallback-version: ${{ env.NEW_VERSION }}
+          version-file: false
           skip-version-file: true
           output-file: false
       - name: Create Release
