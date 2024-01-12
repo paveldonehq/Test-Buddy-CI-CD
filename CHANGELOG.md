@@ -1,3 +1,12 @@
+## [0.6.4](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.6.3...v0.6.4) (2024-01-12)
+
+
+### Bug Fixes
+
+* return bodyFile ([bf71aca](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/bf71acadb7b95b293d554ec9033ee04bf2e6feeb))
+
+
+
 ## [0.6.3](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.6.2...v0.6.3) (2024-01-12)
 
 
@@ -39,10 +48,6 @@
 ### Features
 
 * another feature commit ([0255783](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/02557836303c9c009fe24586a9a70e804a593a71))
-
-
-
-# [0.5.0](https://github.com/paveldonehq/Test-Buddy-CI-CD/compare/v0.4.0...v0.5.0) (2024-01-12)
 
 
 
