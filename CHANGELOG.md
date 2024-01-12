@@ -4,6 +4,7 @@
 ### Bug Fixes
 
 * add skip-version-file param ([131ce00](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/131ce007f3145811452ec0d73f729fea9d9d3473))
+* create release tag ([ede947f](https://github.com/paveldonehq/Test-Buddy-CI-CD/commit/ede947fae16ccf1d4617309f3941edf1666100ff))
 
 
 
