@@ -10,6 +10,8 @@ Test Buddy CI/CD
 - feature commit
 - docs commit
 
+- another fix commit
+
 ## Add changelog
 
 - try to add changelog
