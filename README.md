@@ -19,3 +19,7 @@ Test Buddy CI/CD
 - try to add changelog
 - try to create release notes
 - try to figure out CHANGELOG.md
+
+## WPD-001
+
+- Check PR
