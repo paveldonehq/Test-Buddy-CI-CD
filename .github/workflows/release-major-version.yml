@@ -28,6 +28,7 @@ jobs:
           skip-on-empty: false
           skip-commit: true
           create-summary: true
+          fallback-version: "opploans-0.10.0"
 
       - name: Get Current Date
         run: |
