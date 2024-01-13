@@ -28,10 +28,15 @@ jobs:
           skip-commit: true
           create-summary: true
 
+      - name: Get Current Date
+        run: |
+          current_date=$(date +'%Y-%m-%d')
+          echo "CURRENT_DATE=$current_date" >> "$GITHUB_ENV"
+
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
-          name: "${{ steps.changelog.outputs.tag }} ($(date +'%Y-%m-%d'))"
+          name: '${{ steps.changelog.outputs.tag }} ${{ env.CURRENT_DATE }}'
           tag: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
           generateReleaseNotes: true
