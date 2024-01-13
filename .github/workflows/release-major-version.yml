@@ -31,6 +31,7 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
+          name: "${{ steps.changelog.outputs.tag }} ($(date +'%Y-%m-%d'))"
           tag: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
           generateReleaseNotes: true
