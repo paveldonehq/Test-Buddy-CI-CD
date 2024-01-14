@@ -22,5 +22,4 @@ Test Buddy CI/CD
 
 ## WPD-001
 
-- Check PR
-- BREAKING
+## WPD-003
