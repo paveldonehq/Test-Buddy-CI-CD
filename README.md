@@ -23,4 +23,3 @@ Test Buddy CI/CD
 ## WPD-001
 
 - Check PR
-- Rename all tags BREAKING
