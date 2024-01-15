@@ -23,3 +23,8 @@ Test Buddy CI/CD
 ## WPD-001
 
 ## WPD-003
+
+## WPD-004
+
+- rename workflows release script
+- update README.md
